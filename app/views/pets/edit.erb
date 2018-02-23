@@ -7,4 +7,6 @@
 
   <input type="text" name="pet[name]" id="pet_name" value="<%=@pet.name%>">
 
+  <input type="checkbox" name="owner[pet_ids][]" id="<%= @pet.owner.id%>" value="<%=pet.id%>" <%='checked' if @owner.pets.include?(pet) %>><%=@pet.owner.name%></input>
+
 </form>
