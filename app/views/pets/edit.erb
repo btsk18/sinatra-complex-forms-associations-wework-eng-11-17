@@ -14,6 +14,7 @@
   <% end %>
 
   <%Owner.all.each do |owner|%>
+  <%binding.pry%>
   <input type="checkbox" name="owner[name]" id="<%= owner.id%>" value="<%=owner.id%>"><%=owner.name%></input>
   <% end %>
 
