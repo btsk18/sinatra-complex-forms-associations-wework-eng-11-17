@@ -7,9 +7,13 @@
 
   <input type="text" name="pet[name]" id="pet_name" value="<%=@pet.name%>">
 
+  <br></br>
+
   <%Owner.all.each do |owner|%>
   <input type="checkbox" name="owner[name]" id="<%= owner.id%>" value="<%=owner.id%>" <%='checked' if owner.id == @pet.owner.id%>><%=owner.name%></input>
   <% end %>
+
+  <br></br>
 
   <input type="submit" value="Update Pet">
 </form>
