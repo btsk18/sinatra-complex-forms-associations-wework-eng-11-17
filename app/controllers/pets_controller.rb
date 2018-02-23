@@ -3,7 +3,6 @@ require "pry"
 class PetsController < ApplicationController
 
   get '/pets' do
-    binding.pry
     @pets = Pet.all
     erb :'/pets/index'
   end
